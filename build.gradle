@@ -14,12 +14,11 @@ repositories {
 
 ext {
     set('springCloudVersion', "2021.0.5")
-    set('testcontainersVersion', "1.17.3")
+    set('testcontainersVersion', "1.17.6")
 }
 
-bootBuildImage {
-    imageName = "${project.name}"
-    environment = ["BP_JVM_VERSION": "17.*"]
+jar {
+    enabled = false
 }
 
 dependencies {
